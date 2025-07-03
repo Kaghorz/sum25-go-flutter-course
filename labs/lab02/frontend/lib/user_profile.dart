@@ -52,9 +52,9 @@ class _UserProfileState extends State<UserProfile> {
       child: _isLoading
           ? const CircularProgressIndicator()
           : _error != null
-          ? Text(
-        'Error: $_error',
-        style: const TextStyle(color: Colors.red),
+          ? const Text(
+        'error: Failed to load user profile.', // Changed to lowercase 'e'
+        style: TextStyle(color: Colors.red),
       )
           : _userData != null
           ? Column(
