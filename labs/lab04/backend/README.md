@@ -53,7 +53,7 @@ make backup-db      # Create timestamped backup
 
 ## 📁 Migration Files
 
-Migrations are stored in `../migrations/` directory:
+Migrations are stored in `./migrations/` directory:
 - `20250708090008_create_users_table.sql`
 - `20250708090034_create_posts_table.sql` 
 - `20250708090055_create_categories_table.sql`
