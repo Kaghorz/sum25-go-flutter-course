@@ -1,21 +1,25 @@
 package api
 
 import (
+	"github.com/gorilla/mux"
 	"lab03-backend/storage"
 	"net/http"
-
-	"github.com/gorilla/mux"
 )
 
 // Handler holds the storage instance
 type Handler struct {
 	// TODO: Add storage field of type *storage.MemoryStorage
+	Storage *storage.MemoryStorage
 }
 
 // NewHandler creates a new handler instance
 func NewHandler(storage *storage.MemoryStorage) *Handler {
 	// TODO: Return a new Handler instance with provided storage
-	return nil
+	handler := &Handler{
+		Storage: storage,
+	}
+
+	return handler
 }
 
 // SetupRoutes configures all API routes
@@ -31,6 +35,7 @@ func (h *Handler) SetupRoutes() *mux.Router {
 	// GET /status/{code} -> h.GetHTTPStatus
 	// GET /health -> h.HealthCheck
 	// TODO: Return the router
+
 	return nil
 }
 
